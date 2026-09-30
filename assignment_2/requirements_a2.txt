@@ -1,0 +1,37 @@
+# Paquetes del Assignment 2 (Si es que no las tuvieran instaladas)
+#
+# Python recomendado: 3.11
+#
+# Instalar con (desde la carpeta assignment_2/):
+#     pip install -r requirements_a2.txt
+#
+# O desde una celda del notebook, para instalar en el kernel activo:
+#     %pip install -r requirements_a2.txt
+#
+# Estas son las versiones con las que se ejecutaron los notebooks del trabajo.
+# Despues de instalar, reiniciar el kernel (boton Restart en VS Code).
+
+# --- Parte 1: Scraping (Sesion 4) -------------------------------------------
+selenium==4.49.0            # abrir la busqueda de gob.pe (carga con JavaScript)
+beautifulsoup4==4.15.0      # leer el HTML de cada norma y sacar el titulo completo
+requests==2.34.2            # robots.txt, paginas de normas, Wikipedia y APIs
+
+# --- Parte 2: API de lluvias (Sesion 5) -------------------------------------
+lxml==6.1.3                 # motor que usa pd.read_html para la tabla de Wikipedia
+html5lib==1.1               # motor alternativo para HTML mal formado
+
+# --- Manejo de datos (Partes 1, 2 y 3) --------------------------------------
+pandas==2.3.3               # tablas, limpieza, cruces y archivos CSV
+
+# --- Parte 3: Graficos (Sesion 6) -------------------------------------------
+plotly==7.0.0               # grafico de dispersion y grafico de barras
+nbformat>=4.2.0             # necesario para que Plotly se muestre en el notebook
+
+# --- Notebook ----------------------------------------------------------------
+ipykernel>=6.29             # permite ejecutar los .ipynb en VS Code
+
+# Incluidos en Python, no se instalan: io, re, time
+#
+# Nota sobre el driver de Chrome:
+# Desde Selenium 4.6 el driver se descarga solo. No hace falta instalar
+# chromedriver ni webdriver-manager. Solo se necesita Google Chrome instalado.
