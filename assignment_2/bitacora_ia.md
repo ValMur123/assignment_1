@@ -5,6 +5,10 @@ Uso de IA en la Parte 1: Scraping (Paso 4: error al ejecutar la prueba de extrac
 Al ejecutar la celda de prueba del paso 4 apareció el error "NameError: name 'extraer_articulo' is not defined". Se le pidió a la IA que revisara por qué aparecía el error si la función estaba escrita en el notebook. La IA explicó que el código no tenía errores. En Jupyter, una función solo existe después de ejecutar la celda que la define; como esa celda no se había ejecutado en la sesión actual del kernel, Python todavía no la conocía. También explicó que el navegador seguía abierto porque, si no, el error habría sido name 'navegador' is not defined, ya que esa línea va antes en la celda. Entonces, la solución fue ejecutar primero la celda con def extraer_articulo(art): y luego la celda de prueba, que funcionó correctamente sin repetir el paso 2.
 - Ivette Mamani
 
+En el  Paso 7, al crear la tabla con pd.DataFrame(todas), nuestra celda solo mostraba los datos y no eliminaba duplicados. Le preguntamos a la IA qué faltaba y por qué era importante. Explicó que una norma repetida se contaría dos veces en las declaratorias de cada departamento, y que podía repetirse porque buscamos mes por mes (normas en el límite entre dos meses) o por la paginación. Usamos drop_duplicates(subset="enlace"), porque el enlace es único para cada norma. Resultado: 51 antes y 51 después; no hubo repetidas, pero el control queda en el código.
+
+- Valeria
+
 ## Parte 2: API de lluvias 
 
 Le pedimos el código para leer con `pd.read_html` la tabla de departamentos de Wikipedia y quedarnos con las columnas departamento y capital, para luego geocodificar cada capital con Open-Meteo.
