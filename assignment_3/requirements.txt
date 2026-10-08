@@ -1,0 +1,43 @@
+# Paquetes del Assignment 3
+#
+# Python recomendado: 3.11
+#
+# Instalar con (desde la carpeta assignment_3/):
+#     pip install -r requirements.txt
+#
+# O desde una celda del notebook, para instalar en el kernel activo:
+#     %pip install -r requirements.txt
+#
+# Este mismo archivo lo usa Streamlit Cloud para desplegar app.py.
+# Despues de instalar, reiniciar el kernel (boton Restart en VS Code).
+
+# --- Recoleccion de datos ----------------------------------------------------
+selenium==4.49.0            # abrir paginas que cargan con JavaScript
+requests==2.34.2            # descargar paginas y consultar APIs
+
+# --- Manejo de datos (Partes 1, 2 y 3) --------------------------------------
+pandas==2.3.3               # leer dataset.csv, filtros, cruces y tablas
+
+# --- Parte 1: Visualizacion (Sesion 6) --------------------------------------
+plotly==7.0.0               # incluye plotly.express (px): barras, dispersion y libre
+nbformat>=4.2.0             # necesario para que Plotly se muestre en el notebook
+
+# --- Parte 2: Mapas (Sesion 7) ----------------------------------------------
+geopandas                   # leer el GeoJSON departamental y unirlo con los datos
+matplotlib                  # motor de los mapas estaticos de Geopandas (.plot)
+mapclassify                 # coropletas por cuantiles (scheme="quantiles")
+folium                      # mapa interactivo (Choropleth + Tooltip)
+
+# --- Parte 3: Dashboard (Sesion 8) ------------------------------------------
+streamlit                   # aplicacion web: filtros, metricas, graficos y tabla
+streamlit-folium            # mostrar el mapa de Folium dentro de Streamlit
+
+# --- Notebook ----------------------------------------------------------------
+ipykernel>=6.29             # permite ejecutar los .ipynb en VS Code
+
+# Incluidos en Python, no se instalan: os, re, time, unicodedata, json, pathlib
+#
+# Nota sobre el driver de Chrome:
+# Desde Selenium 4.6 el driver se descarga solo. Solo se necesita Google
+# Chrome instalado.
+
